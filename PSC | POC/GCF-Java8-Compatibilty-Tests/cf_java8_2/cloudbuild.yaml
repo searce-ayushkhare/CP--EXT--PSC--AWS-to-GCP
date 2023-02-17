@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - java8test_2
+      - --region=us-central1
+      - --source=.
+      - --entry-point=org.example.CFJava8_2
+      - --trigger-http
+      - --runtime=java17
+      - --allow-unauthenticated
