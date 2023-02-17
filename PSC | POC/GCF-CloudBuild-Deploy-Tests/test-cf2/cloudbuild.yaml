@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - cfViaBuild
+      - --region=us-central1
+      - --source=.
+      - --entry-point=org.example.MyCloudFunction2
+      - --trigger-http
+      - --runtime=java17
+      - --allow-unauthenticated
